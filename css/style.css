@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgb(238, 173, 52) 65%, rgb(137, 138, 137));
+}
+
+#container{
+    padding: 1px;
+    position: static;
+    background-color: #dddddc;
+    width: 45%;
+    min-height: 400px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    opacity: 0.88;
+}
+
+#fomulario{
+    padding-top: 30px;
+    padding-bottom: auto;
+    position: relative;
+    text-align: center;
+}
+
+span{
+    color: white;
+    text-shadow: black 1px 0 10px;
+
+}
+
+#resultado {
+    color: white;
+    background-color: #a3a3a3;
+    border: solid 1px rgb(150, 149, 149);
+    padding: 10px;
+    width: 85%;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-shadow: black 1px 0 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+
+.glow-on-hover {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00,  #fda22a, #ff3402, #ff5100);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #a3a3a3;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+#num1{
+    border: 1px solid black;
+}
+
+#num1:focus{
+    box-shadow: 0 0 0 0;
+    border: 1px solid rgb(156, 156, 156);
+    outline: 0;
+}
+
+#num2{
+    border: 1px solid black;
+}
+
+#num2:focus{
+    box-shadow: 0 0 0 0;
+    border: 1px solid rgb(156, 156, 156);
+    outline: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
